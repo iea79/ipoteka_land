@@ -11,18 +11,18 @@ input[type=datetime],
 textarea {
 	background-color: $input_bg_color;
 	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	padding: 10px 13px;
 	outline: none;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 300;
 	font-family: $main_font_family;
-	border-radius: 5px;
+	border-radius: 0;
 	@include trs(0.3s);
 	&:hover {
 	}
 	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
+		border: 1px solid $input_focus_border_color;
+		background-color: $input_focus_bg_color;
 		@include placeholder {
 			color: red;
 		}
@@ -132,7 +132,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 	font-family: $main_font_family;
 	font-size: 16px;
 	font-weight: 300;
-	padding: 5px 15px 7px;
+	padding: 8px 13px 7px;
 	border: none;
 	outline: none;
 	text-decoration: none;
@@ -141,17 +141,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
-	@include trs(0.3s);
+	border-radius: 10px;
+	@include trs(0.3);
 	&:hover {
-		background-color: lighten($btn_default_bg_color, 20%);
+		background-color: darken($btn_default_bg_color, 8%);
 	}
 	@each $status_el, $color_bg in $el_colors {
 		&__#{$status_el} {
 			background-color: $color_bg;
 			color: $btn_contrast_text_color;
 			&:hover {
-				background-color: lighten($color_bg, 20%);
+				background-color: darken($color_bg, 8%);
 			}
 		}
 	}	

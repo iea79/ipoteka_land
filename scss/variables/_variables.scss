@@ -1,18 +1,29 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family:								Open Sans, sans-serif;
-$main_color:									#000;
+$main_font_family:								"Century Gothic";
+$main_color:									#4b545b;
+$main_line_height:								1.2;
+$main_font_size:								16px;
 
-$footer_height: 								100px;
+
+$font: 											"Century Gothic";
+$font-bold: 									"Century Gothic Bold";
+$container_width:								970px;
+
+$footer_height: 								auto;
 
 // Color collection for elements
-$color_primary:									#000000;
-$color_success:									#27BA6C;
+$color_primary:									#7b8287;
+$color_success:									#36a566;
 $color_info:									#03a9f4;
-$color_warning:									#FF8833;
+$color_warning:									#f5a623;
 $color_danger:									#ff1a1a;
 $color_withe:									#ffffff;
 
+$green:											$color_success;
+$yellow:										$color_warning;
+$white:											$color_withe;
+$link: 											#2b2a29;
 
 $el-colors: (
 	primary: $color_primary, // color for .element__primary
@@ -35,8 +46,8 @@ $grid_padding:									20px;
 // Input color
 $input_color:									$main_color;
 $input_bg_color:								#fff;
-$input_border_color:							#ddd;
-$input_placeholder_color:						#ddd;
+$input_border_color:							#a3a8ab;
+$input_placeholder_color:						#a3a8ab;
 
 // Input hover color
 $input_hover_color:								#fff;
@@ -46,9 +57,9 @@ $input_hover_placeholder_color:					#ddd;
 
 // Input focus color
 $input_focus_color:								#fff;
-$input_focus_bg_color:							#fff;
-$input_focus_border_color:						#ddd;
-$input_focus_placeholder_color:					#ddd;
+$input_focus_bg_color:							#fefefe;
+$input_focus_border_color:						#a3a8ab;
+$input_focus_placeholder_color:					#a3a8ab;
 
 // Input disabled color
 $input_disabled_color:							#fff;

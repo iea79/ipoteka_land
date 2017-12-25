@@ -1,19 +1,7 @@
 // Grid
 // ------------------------
 // Example - for html
-// <div class="grid grid__1_3 ">
-//  	<div class="grid__wrapper">
-// 			...
-//  	</div>
-//  	<div class="grid__wrapper">
-// 			...
-//  	</div>
-//  	<div class="grid__wrapper">
-// 			...
-//  	</div>
-// </div>
-// or
-// <div class="grid grid__1_3 ">
+// <div class="grid grid__3 ">
 //  	<div>
 // 			...
 //  	</div>
@@ -34,7 +22,7 @@
 	&-nowrap {
 		@include flex-flow(row nowrap);
 	}
-	&__wrapper,>div {
+	>div {
 		padding-left: $grid_padding;
 		margin-bottom: $grid_padding;
 		&.width {
@@ -62,33 +50,51 @@
 		}
 	}
 	&__item {
+		// border: 1px solid #000;
 		&.active {
 			// border: 3px solid #ddd;
 		}
 	}
 	&__1 {
-		.grid__wrapper,>div {		
+		>div {		
 			width: 100%;
 		}
 	}
 	&__2 {
-		.grid__wrapper,>div {		
+		>div {		
 			width: 50%;
 		}
 	}
 	&__3 {
-		.grid__wrapper,>div {
+		>div {
 			width: 33.3%;
 		}
 	}
 	&__4 {
-		.grid__wrapper,>div {		
+		>div {		
 			width: 25%;
 		}
 	}
 	&__5 {
-		.grid__wrapper,>div {		
+		>div {		
 			width: 20%;
+		}
+	}
+}
+
+
+[data-grid-match] {
+	.grid__item {
+		background-color: #eee;
+	}
+}
+
+@media (max-width: 991px) {
+	.grid {
+		&__4 {
+			>div {
+				width: 50%;
+			}
 		}
 	}
 }

@@ -15,13 +15,9 @@ function isTouch() { return TempApp.touchDevice(); } // for touch device
 
 $(document).ready(function() {
 
-    // Хак для фокуса на ссылке на iOS
+    // Хак для клика по ссылке на iOS
     if (isIOS()) {
         $(function(){$(document).on('touchend', 'a', $.noop)});
-    }
-
-    if (isIOS()) {
-    } else {
     }
 
 	if ('flex' in document.documentElement.style) {
@@ -73,5 +69,102 @@ $(document).ready(function() {
     //             }
     //     });
     // });
+   	// setGridMatch($('[data-grid-match] .grid__item'));
+   	gridMatch();
+
+   	var slider = $( ".calculate__slider" );
+
+   	// Calculate
+   	$( ".calculate__slider" ).each(function(index, el) {
+   		var sliderWrap = $(this).closest('.calculate__form_row'),
+   			sliderMin = $(this).data('min'),
+   			sliderMax = $(this).data('max'),
+   			sliderVal = $(this).data('value'),
+   			sliderStep = $(this).data('step'),
+   			amount = sliderWrap.find('input');
+		$(this).slider({
+			range: "min",
+			value: sliderVal,
+			min: sliderMin,
+			max: sliderMax,
+			step: sliderStep,
+			slide: function( event, ui ) {
+				$( amount ).val( addSpaces(ui.value) );
+				calculate();
+			}
+		});
+		$( amount ).val(addSpaces($(this).slider( "value" )));
+   	});
+
+	$( ".calculate input" ).on('keyup change', function(event) {
+		event.preventDefault();
+		var slider = $(this).closest('.calculate__form_row').find('.calculate__slider');
+		slider.slider( "value", $(this).val());
+		calculate();
+	});
+
+	calculate();
+
 
 });
+
+function calculate() {
+
+	var price = $('#price').val().replace(/\s+/g,''),
+		have = $('#have').val().replace(/\s+/g,''),
+		year = $('#year').val().replace(/\s+/g,''),
+		percent = $('#percent').val().replace(/\s+/g,'');
+
+	var need = price-have;
+	var total = addSpaces(need);
+	var rezult = need / year;
+	var totalPercent = rezult * percent;
+	var roundedrezult = addSpaces(parseFloat(rezult + totalPercent).toFixed());
+
+	$('#total_summ').html(total);
+	$('#total_percent').html(percent.replace('.', ','));
+	$('#total_month').html(roundedrezult);
+
+}
+
+function addSpaces(nStr){
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+	}
+	return x1 + x2;
+}
+
+$(window).resize(function(event) {
+	checkOnResize()
+});
+
+function checkOnResize() {
+   	// setGridMatch($('[data-grid-match] .grid__item'));
+   	gridMatch();
+}
+
+function gridMatch() {
+   	$('[data-grid-match] .grid__item').matchHeight({
+   		byRow: true,
+   	});
+}
+
+// function setGridMatch(columns) {
+// 	var tallestcolumn = 0;
+// 	columns.removeAttr('style');
+// 	columns.each( function() {
+// 		currentHeight = $(this).height();
+// 		if(currentHeight > tallestcolumn) {
+// 			tallestcolumn = currentHeight;
+// 		}
+// 	});
+// 	setTimeout(function() {
+// 		columns.css('minHeight', tallestcolumn);
+// 	}, 100);
+// }
+
