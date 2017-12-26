@@ -10,8 +10,10 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script type="text/javascript" src="js/function.js"></script>
 
 </head>
@@ -20,30 +22,34 @@
 
 <div class="wrapper">
 
-	<header class="header">
-		<div class="container_center">
-
-			<a href="/" class="logo"><img src="img/logo.png" alt=""></a>
-
-			<div class="header__action">
-				<a href="tel:8 800 700-45-91" class="header__action_tel">8 800 700-45-91</a>
-				<a href="#" class="btn btn__success">заказать звонок</a>
-			</div>
-					
-		</div>
-	</header><!-- .header-->
-	
 	<!-- begin main__content -->
 	<main class="main__content">
 
 		<!-- begin first__screen -->
 		<section id="first__screen" class="first__screen">
+		
+			<header class="header">
+				<div class="container_center">
+
+					<a href="/" class="logo">
+						<!-- <img src="img/logo.png" alt=""> -->
+						Федеральный ипотечный <br>центр Сочи
+					</a>
+
+					<div class="header__action">
+						<a href="tel:8 800 700-45-91" class="header__action_tel">8 800 700-45-91</a>
+						<a href="#calback" class="btn btn__success" data-toggle="modal">заказать звонок</a>
+					</div>
+							
+				</div>
+			</header><!-- .header-->
+			
 			<div class="container_center">
 			
 				<h1 class="first__screen_title">
 					Ипотека от<br>
 					<span class="first__screen_percent">7,4%</span>
-					<span class="first__screen_sub">За 24 часа, не выходя из дома!</span>
+					<!-- <span class="first__screen_sub">За 24 часа, не выходя из дома!</span> -->
 				</h1>
 
 				<div class="first__screen_bottom">
@@ -56,12 +62,12 @@
 		<!-- end first__screen -->
 
 		<!-- begin download__line -->
-		<div class="download__line">
+		<!-- <div class="download__line">
 		
 			<div class="btn btn__warning">Как получить низкую ставку?</div>
 			<a href="#" download class="download__link">Загрузить документы</a>
 			
-		</div>
+		</div> -->
 		<!-- end download__line -->
 	
 		<!-- begin choose__bank -->
@@ -81,13 +87,13 @@
 						<img src="img/bank3.jpg">
 					</div>
 					<div class="grid__wrapper">
-						<img src="img/bank4.jpg">
+						<img src="img/bank4-2.jpg">
 					</div>
 					<div class="grid__wrapper">
 						<img src="img/bank5.jpg">
 					</div>
 					<div class="grid__wrapper">
-						<img src="img/bank6.jpg">
+						<img src="img/bank6-2.jpg">
 					</div>
 				</div>
 				<!-- end grid -->
@@ -103,9 +109,9 @@
 		<!-- begin 'ekonom -->
 		<div class="ekonom">
 
-			<h2 class="section__title"><span>Почему мы экономим ваши деньги?</span></h2>
+			<h2 class="section__title"><span>ПОЧЕМУ ВЫГОДНО РАБОТАТЬ С НАМИ?</span></h2>
 
-			<div class="section__sub">Предоплат не берем. Сумму, ставку и сроки кредита закрепляем в договоре. <br>Оплачиваете только при достижении нужных вам условий.</div>
+			<div class="section__sub">Вам не нужно ходить по всем банкам и тратить свое время, у нас вы можете получить полную консультацию по ипотечным кредитам!</div>
 		
 			<div class="container_center">
 			
@@ -115,42 +121,28 @@
 						<div class="grid__item">
 							<div class="ekonom__step">1</div>
 							<div class="ekonom__name">Выбираем самое выгодное предложение для Вас</div>
-							Полное избавление вас 
-							от заполнения бумаг и 
-							хождения по банкам 
-							при получении
-							кредита.
+							Избавим от всей бумажной волокиты и хождения по банкам.
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">2</div>
 							<div class="ekonom__name">Экономия на страховке и отсутствие комиссии</div>
-							Получение ипотеки 
-							по ускоренной 
-							процедуре
-							рассмотрения 
-							заявки
+							Возможность понижения процентной ставки до 1% при получении ипотеки!
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">3</div>
 							<div class="ekonom__name">Пониженный процент за счет партнерских программ</div>
-							Расскажем о том,
-							как получить ипотечный
-							кредит без
-							первоначального
-							взноса.
+							Поможем использовать материнский капитал, военную ипотеку, любые субсидии для первоначального взноса.
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">4</div>
 							<div class="ekonom__name">Бесплатная консультация и одобрение</div>
-							Получите ответы 
-							на любые вопросы 
-							по ипотеке.
+							Поможем с получением в сложных ситуациях: отсутствие  взноса,, нет официальной з/п и тд.
 						</div>
 					</div>
 				</div>
@@ -178,7 +170,7 @@
 								<div class="form__select">
 									<select class="form__field">
 										<option>Купить квартиру в новостройке</option>
-										<option></option>
+										<option>Вторичный фонд</option>
 									</select>
 								</div>
 							</div>
@@ -273,23 +265,257 @@
 		</section>
 		<!-- end calculate -->
 
+		<!-- begin services -->
+		<section id="services" class="services">
+
+			<h2 class="section__title"><span>ОСНОВНЫЕ УСЛУГИ</span></h2>
+
+			<div class="container_center">
+
+				<!-- begin grid -->
+				<div class="grid grid__2">
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="services__title"><span class="services__title_num">790 ₽</span></div>
+							<div class="services__text">Проверка кредитной истории</div>
+						</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="services__title">Бесплатно</div>
+							<div class="services__text">Сопровождение ипотеки</div>
+						</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="services__title">Бесплатно</div>
+							<div class="services__text">Одобрение ипотеки</div>
+						</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="services__title">Бесплатно</div>
+							<div class="services__text">При работе <br>с партнером</div>
+						</div>
+					</div>
+				</div>
+				<!-- end grid -->
+				
+			</div>
+		</section>
+		<!-- end services -->
+
+		<!-- begin download__line -->
+		<div class="download__line">
+		
+			<div class="btn btn__warning">Оставить заявку</div>
+			<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
+			
+		</div>
+		<!-- end download__line -->
+
+		<!-- begin cachback -->
+		<section id="cachback" class="cachback">
+			<div class="container_center">
+			
+				<h2 class="cachback__title">Вернем до </h2>
+
+				<div class="cachback__summ">390 000 ₽</div>
+
+				<div class="cachback__text">оформив правильно документы</div>
+				
+			</div>
+		</section>
+		<!-- end cachback -->
+
+		<!-- begin program -->
+		<section id="program" class="program">
+			
+			<h2 class="section__title"><span>ипотечные программы</span></h2>
+
+			<div class="section__sub section__sub--success">Бесплатная консультация</div>
+
+			<div class="container_center">
+			
+				<!-- begin grid -->
+				<div class="grid grid__2">
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr1.jpg" alt=""/>
+						</div>
+						<div class="program__text">Военная ипотека</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr2.jpg" alt=""/>
+						</div>
+						<div class="program__text">На этапе строительства</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr3.jpg" alt=""/>
+						</div>
+						<div class="program__text">Материнский капитал</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr4.jpg" alt=""/>
+						</div>
+						<div class="program__text">На готовое жилье</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr5.jpg" alt=""/>
+						</div>
+						<div class="program__text">По двум документам</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr6.jpg" alt=""/>
+						</div>
+						<div class="program__text">Бизнес ипотека</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr7.jpg" alt=""/>
+						</div>
+						<div class="program__text">Для молодых семей</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="program__ico">
+							<img src="img/pr8.jpg" alt=""/>
+						</div>
+						<div class="program__text">Рефенансирование</div>
+					</div>
+				</div>
+				<!-- end grid -->
+				
+			</div>
+		</section>
+		<!-- end program -->
+	
+		<!-- begin download__line -->
+		<div class="download__line">
+		
+			<a href="#" class="btn btn__warning">Узнать больше</a>
+			<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
+			
+		</div>
+		<!-- end download__line -->
+
+		<!-- begin info -->
+		<section id="info" class="info">
+
+			<h2 class="section__title"><span>Полезная информация</span></h2>
+			<div class="section__sub">Покупка квартиры в ипотеку - это очень важным <br>и ответственный момент в жизни любого человека.</div>
+
+			<div class="container_center">
+			
+				<!-- begin grid -->
+				<div class="grid grid__2">
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="info__title">Перечень документов по приобретению объекта недвижимости</div>
+							<div class="info__list">
+								<div class="info__list_item">Свидетельство о праве собственности</div>
+								<div class="info__list_item">Документы-основания</div>
+								<div class="info__list_item">Технический паспорт</div>
+								<div class="info__list_item">Кадастровый паспорт</div>
+								<div class="info__list_item">Паспорт РФ</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid__wrapper">
+						<div class="grid__item">
+							<div class="info__title">Перечень документов для получения ипотечного кредита </div>
+							<div class="info__list">
+								<div class="info__list_item">Свидетельство о праве собственности</div>
+								<div class="info__list_item">Документы-основания</div>
+								<div class="info__list_item">Технический паспорт</div>
+								<div class="info__list_item">Кадастровый паспорт</div>
+								<div class="info__list_item">Паспорт РФ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end grid -->
+				
+			</div>
+		</section>
+		<!-- end info -->
+
+		<!-- begin general -->
+		<div id="general" class="general">
+			<div class="container_center">
+			
+				<div class="general__left">
+					<div class="general__left_top">оформим ипотеку</div>
+					<div class="general__left_day">за 5 дней</div>
+					<div class="general__left_bottom">даже после <br>отказа банка</div>
+				</div>
+
+				<div class="general__percent">11%</div>
+				
+			</div>
+
+			<!-- begin download__line -->
+			<div class="download__line">
+			
+				<a href="#" class="btn btn__warning">Одобрить ипотеку</a>
+				<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
+				
+			</div>
+			<!-- end download__line -->
+
+		</div>
+		<!-- end general -->
+
+		<!-- begin contact -->
+		<section id="contact" class="contact">
+			<h2 class="section__title"><span>контакты</span></h2>
+			<div class="section__sub">ЦЕНТРАЛЬНЫЙ ОФИС:  Бизнес-центр «Европейский» 5 этаж,  офис 506.
+				<br>Адрес: Сочи, ул.Несебрская 6
+				<br><br>Телефон: <a href="tel:8 800 700-45-91">8 800 700-45-91</a>
+			</div>
+			<div id="map" class="map"></div>
+		</section>
+		<!-- end contact -->
+
 	</main>
 	<!-- end main__content -->
 
+<!-- begin Modal calback -->
+<div class="modal fade calback" id="calback">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="form">
+				<div class="form__row">
+					<div class="form__label">Ваше имя:</div>
+					<div class="form__control">
+						<input type="text" class="form__field">
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__label">Номер телефона:</div>
+					<div class="form__control">
+						<input type="text" class="form__field">
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__label"></div>
+					<div class="form__control">
+						<button class="btn btn__success">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal calback -->
+
 </div>
 <!-- end .wrapper -->
-
-<!-- begin footer -->
-<footer class="footer">
-
-	<div class="container_center">
-	
-
-	</div>
-
-</footer>
-<!-- end footer -->
-
 
 </body>
 </html>

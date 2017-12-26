@@ -168,3 +168,20 @@ function gridMatch() {
 // 	}, 100);
 // }
 
+// Map
+ymaps.ready(init);
+
+function init() {
+	var center = [43.582031074541156,39.71922600000001];
+    var myMap = new ymaps.Map("map", {
+            center: center,
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+    myMap.geoObjects
+        .add(new ymaps.Placemark(center, {
+            balloonContent: 'ЦЕНТРАЛЬНЫЙ ОФИС:  Бизнес-центр «Европейский» 5 этаж,  офис 506. <br>Адрес: Сочи, ул.Несебрская 6'
+        }));
+}

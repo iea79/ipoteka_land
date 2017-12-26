@@ -96,5 +96,30 @@
 				width: 50%;
 			}
 		}
+		&__3 {
+			>div {
+				width: 50%;
+			}
+		}
 	}
 }
+@media (max-width: 767px) {
+	.grid {
+		&__4 {
+			>div {
+				width: 100%;
+			}
+		}
+		&__3 {
+			>div {
+				width: 100%;
+			}
+		}
+		&__2 {
+			>div {
+				width: 100%;
+			}
+		}
+	}
+}
+
