@@ -5,7 +5,7 @@
 //  Skype: ivanov_ea
 //  ==========================
  */
-.grid:after, .footer:after, .header:after, .first__screen_bottom:after, .calculate__wrap:after, .calculate__form_row:after, .services .grid__item:after, .main__content:after, .general:after, .modal .form__row:after {
+.grid:after, .footer:after, .header:after, .main__content:after, .first__screen_bottom:after, .calculate__wrap:after, .calculate__form_row:after, .services .grid__item:after, .general:after, .modal .form__row:after {
   content: '';
   display: table;
   clear: both; }
@@ -2012,6 +2012,11 @@ a {
       margin-bottom: 15px;
       opacity: .5; } }
 
+/* Middle
+ ----------------------------------------------------------------------------- */
+.main__content {
+  padding-bottom: auto; }
+
 .first__screen {
   background: url("../img/first2.jpg") no-repeat top center;
   background-size: cover;
@@ -2307,11 +2312,6 @@ a {
         .services .grid__wrapper {
           margin-bottom: 20px; } }
 
-/* Middle
- ----------------------------------------------------------------------------- */
-.main__content {
-  padding-bottom: auto; }
-
 .choose__bank {
   padding-top: 30px;
   padding-bottom: 60px; }
@@ -2400,7 +2400,7 @@ a {
     text-align: left;
     margin: 35px 0; }
     .program .grid__wrapper {
-      display: table !important; }
+      display: inline-table !important; }
       .program .grid__wrapper > div {
         display: table-cell;
         vertical-align: middle; }
