@@ -4,7 +4,7 @@ $to  = 'busforward@gmail.com' . ', ';  // обратите внимание на
 $to .= 'workrealcapital@yandex.ru';
 
 // тема письма
-$subject = 'Письмо с моего сайта';
+$subject = 'Письмо с сайта';
 
 // текст письма
 $message = 'Пользователь ' . $_POST['name'] . ' отправил вам письмо:<br />
@@ -16,8 +16,8 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
 // Дополнительные заголовки
-$headers .= 'To: Иван <Ivan@example.com>' . "\r\n"; // Свое имя и phone
-$headers .= 'From: '  . $_POST['name'] . '<' . $_POST['phone'] . '>' . "\r\n";
+$headers .= 'To: workrealcapital@yandex.ru' . "\r\n"; // Свое имя и phone
+$headers .= 'From: Письмо с сайта>' . "\r\n";
 
 
 // Отправляем
