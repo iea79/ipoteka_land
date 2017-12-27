@@ -41,11 +41,13 @@
 /* ======================================================================== */
 /* Breakpoints */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body, .wrapper {
   height: 100%;
   position: relative;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -111,6 +113,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -151,6 +154,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -322,6 +326,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -357,6 +362,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -453,6 +459,7 @@ textarea {
   font-family: "Century Gothic";
   border-radius: 0;
   -webkit-transition: all 0.3ss;
+  -o-transition: all 0.3ss;
   transition: all 0.3ss; }
   input:not([type]):focus,
   input[type=text]:focus,
@@ -657,6 +664,7 @@ input[type=checkbox]:disabled:indeterminate:before {
   cursor: pointer;
   border-radius: 10px;
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s; }
   .btn:hover {
     background-color: #c9c9c9; }
@@ -688,6 +696,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 .grid {
   margin-left: -20px;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
   html[data-browser*="flexible"] .grid {
     display: -webkit-box;
@@ -710,8 +719,14 @@ input[type=checkbox]:disabled:indeterminate:before {
       line-height: 1.2;
       font-size: 16px; }
   html[data-browser*="flexible"] .grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap; }
   html[data-browser*="flexible"] .grid-nowrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap; }
   .grid > div {
     padding-left: 20px;
@@ -953,6 +968,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 /* support: IE8 - See #6727 */
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
   filter: inherit; }
 
 .ui-slider-horizontal {
@@ -1080,6 +1096,7 @@ a.ui-button:focus {
   text-decoration: none; }
 
 .ui-visual-focus {
+  -webkit-box-shadow: 0 0 3px 1px #5e9ed6;
   box-shadow: 0 0 3px 1px #5e9ed6; }
 
 .ui-state-active,
@@ -1792,15 +1809,27 @@ a.ui-button:active,
       border-top: 1px solid #4b545b;
       top: 10px; }
     .modal-close:before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
     .modal-close:after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
     .modal-close:hover {
       opacity: .8; }
   .modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
     transform: translate(0, -25%);
-    transition: transform 0.3s ease-out; }
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
   .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     position: relative; }
   .modal-dialog {
@@ -1814,6 +1843,7 @@ a.ui-button:active,
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     background-clip: padding-box;
     outline: 0;
@@ -1901,6 +1931,7 @@ a.ui-button:active,
     text-align: center;
     text-decoration: none;
     -webkit-transition: all 0.3ss;
+    -o-transition: all 0.3ss;
     transition: all 0.3ss; }
     .soc a:hover {
       opacity: .8; }
@@ -2201,6 +2232,7 @@ a {
       /* for FF */
       -moz-appearance: none;
       text-indent: 0.01px;
+      -o-text-overflow: '';
       text-overflow: '';
       /* for IE */
       -ms-appearance: none;
@@ -2567,3 +2599,5 @@ a {
 
 /* Responsive styles
 ----------------------------------------------------------------------------- */
+
+/*# sourceMappingURL=style.css.map */

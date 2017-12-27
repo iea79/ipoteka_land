@@ -99,7 +99,7 @@
 				<!-- end grid -->
 
 				<div class="choose__bank_action">
-					<a href="#" class="btn btn__success">Вам нужен другой банк?</a>
+					<a href="#calback" class="btn btn__success" data-toggle="modal">Вам нужен другой банк?</a>
 				</div>
 				
 			</div>
@@ -109,9 +109,9 @@
 		<!-- begin 'ekonom -->
 		<div class="ekonom">
 
-			<h2 class="section__title"><span>ПОЧЕМУ ВЫГОДНО РАБОТАТЬ С НАМИ?</span></h2>
+			<h2 class="section__title"><span>Вам не нужно ходить по всем банкам и тратить свое время, у нас вы можете получить полную консультацию по ипотечным кредитам!</span></h2>
 
-			<div class="section__sub">Вам не нужно ходить по всем банкам и тратить свое время, у нас вы можете получить полную консультацию по ипотечным кредитам!</div>
+			<!-- <div class="section__sub">Вам не нужно ходить по всем банкам и тратить свое время, у нас вы можете получить полную консультацию по ипотечным кредитам!</div> -->
 		
 			<div class="container_center">
 			
@@ -120,29 +120,26 @@
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">1</div>
-							<div class="ekonom__name">Выбираем самое выгодное предложение для Вас</div>
-							Избавим от всей бумажной волокиты и хождения по банкам.
+							<div class="ekonom__name">Избавим от всей бумажной волокиты и хождения по банкам.</div>
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">2</div>
-							<div class="ekonom__name">Экономия на страховке и отсутствие комиссии</div>
-							Возможность понижения процентной ставки до 1% при получении ипотеки!
+							<div class="ekonom__name">Возможность понижения процентной ставки до 1% при получении ипотеки!</div>
+							
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">3</div>
-							<div class="ekonom__name">Пониженный процент за счет партнерских программ</div>
-							Поможем использовать материнский капитал, военную ипотеку, любые субсидии для первоначального взноса.
+							<div class="ekonom__name">Поможем использовать материнский капитал, военную ипотеку, любые субсидии для первоначального взноса.</div>
 						</div>
 					</div>
 					<div class="grid__wrapper">
 						<div class="grid__item">
 							<div class="ekonom__step">4</div>
-							<div class="ekonom__name">Бесплатная консультация и одобрение</div>
-							Поможем с получением в сложных ситуациях: отсутствие  взноса,, нет официальной з/п и тд.
+							<div class="ekonom__name">Поможем с получением в сложных ситуациях: отсутствие  взноса,, нет официальной з/п и тд.</div>
 						</div>
 					</div>
 				</div>
@@ -308,7 +305,7 @@
 		<!-- begin download__line -->
 		<div class="download__line">
 		
-			<div class="btn btn__warning">Оставить заявку</div>
+			<a href="#calback" class="btn btn__warning" data-toggle="modal">Оставить заявку</a>
 			<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
 			
 		</div>
@@ -397,7 +394,7 @@
 		<!-- begin download__line -->
 		<div class="download__line">
 		
-			<a href="#" class="btn btn__warning">Узнать больше</a>
+			<a href="#calback" class="btn btn__warning" data-toggle="modal">Узнать больше</a>
 			<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
 			
 		</div>
@@ -407,7 +404,7 @@
 		<section id="info" class="info">
 
 			<h2 class="section__title"><span>Полезная информация</span></h2>
-			<div class="section__sub">Покупка квартиры в ипотеку - это очень важным <br>и ответственный момент в жизни любого человека.</div>
+			<!-- <div class="section__sub">Покупка квартиры в ипотеку - это очень важным <br>и ответственный момент в жизни любого человека.</div> -->
 
 			<div class="container_center">
 			
@@ -461,7 +458,7 @@
 			<!-- begin download__line -->
 			<div class="download__line">
 			
-				<a href="#" class="btn btn__warning">Одобрить ипотеку</a>
+				<a href="#calback" class="btn btn__warning" data-toggle="modal">Одобрить ипотеку</a>
 				<!-- <a href="#" download class="download__link">Загрузить документы</a> -->
 				
 			</div>
@@ -489,26 +486,27 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<a href="#" class="modal-close" data-dismiss="modal"></a>
-			<div class="form">
+			<form id="form" class="form">
 				<div class="form__row">
 					<div class="form__label">Ваше имя:</div>
 					<div class="form__control">
-						<input type="text" class="form__field">
+						<input type="text" class="form__field" name="name" required="required">
 					</div>
 				</div>
 				<div class="form__row">
 					<div class="form__label">Номер телефона:</div>
 					<div class="form__control">
-						<input type="text" class="form__field">
+						<input type="text" class="form__field" name="phone" required="required">
 					</div>
 				</div>
 				<div class="form__row">
 					<div class="form__label"></div>
 					<div class="form__control">
-						<button class="btn btn__success">Отправить</button>
+						<input type="submit" class="btn btn__success" value="Отправить">
 					</div>
 				</div>
-			</div>
+				<div id="rezult"></div>
+			</form>
 		</div>
 	</div>
 </div>
