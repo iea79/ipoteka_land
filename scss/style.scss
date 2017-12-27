@@ -979,6 +979,10 @@ a {
 			height: 44px;
 			min-width: 200px;
 		}
+		&__rezult {
+			margin-top: 20px;
+			text-align: center;
+		}
 	}
 	@media (max-width: 767px) {
 		.form {

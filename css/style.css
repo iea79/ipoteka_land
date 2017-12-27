@@ -2591,6 +2591,10 @@ a {
   height: 44px;
   min-width: 200px; }
 
+.modal .form__rezult {
+  margin-top: 20px;
+  text-align: center; }
+
 @media (max-width: 767px) {
   .modal .form__label {
     float: none;

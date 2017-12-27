@@ -1,19 +1,25 @@
-<?
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'busforward@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок'; //Загаловок сообщения
-        $message = '
-                <html>
-                    <head>
-                        <title>'.$subject.'</title>
-                    </head>
-                    <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>                        
-                    </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
-}
+<?php
+// несколько получателей
+$to  = 'busforward@gmail.com' . ', ';  // обратите внимание на запятую
+$to .= 'info@example.com';
+
+// тема письма
+$subject = 'Письмо с моего сайта';
+
+// текст письма
+$message = 'Пользователь' . $_POST['name'] . ' отправил вам письмо:<br />
+Связяться с ним можно по телефону <a href="tel:' . $_POST['phone'] . '">' . $_POST['phone'] . '</a>'
+;
+
+// Для отправки HTML-письма должен быть установлен заголовок Content-type
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+// Дополнительные заголовки
+$headers .= 'To: Иван <Ivan@example.com>' . "\r\n"; // Свое имя и phone
+$headers .= 'From: '  . $_POST['name'] . '<' . $_POST['phone'] . '>' . "\r\n";
+
+
+// Отправляем
+mail($to, $subject, $message, $headers);
 ?>

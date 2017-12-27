@@ -106,17 +106,21 @@ $(document).ready(function() {
 	calculate();
 
     $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
+        var form_data = $(this).serialize(); //собераем все данные из формы
+        console.log(form_data);
+        $.ajax({
             type: "POST", //Метод отправки
             url: "/send.php", //путь до php фаила отправителя
             data: form_data,
             success: function() {
                 //код в этом блоке выполняется при успешной отправке сообщения
-                $('#rezult').html('Ваше сообщение отпрвлено!');
+                $("#form").append('<div class="form__rezult">Ваше сообщение отпрaвлено!</div>');
             }
-        })
+        });
+        return false;
     });
+
+    $("[name=phone]").mask("+7(999) 999-9999");
 
 });
 
