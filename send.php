@@ -1,7 +1,7 @@
 <?php
 // несколько получателей
 $to  = 'busforward@gmail.com' . ', ';  // обратите внимание на запятую
-$to .= 'info@example.com';
+// $to .= 'info@example.com';
 
 // тема письма
 $subject = 'Письмо с моего сайта';
