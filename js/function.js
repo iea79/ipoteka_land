@@ -110,7 +110,7 @@ $(document).ready(function() {
         console.log(form_data);
         $.ajax({
             type: "POST", //Метод отправки
-            url: "/send.php", //путь до php фаила отправителя
+            url: "http://frontendie.ru/jobs/ipoteka_land/send.php", //путь до php фаила отправителя
             data: form_data,
             success: function() {
                 //код в этом блоке выполняется при успешной отправке сообщения
