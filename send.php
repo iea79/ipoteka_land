@@ -1,13 +1,13 @@
 <?php
 // несколько получателей
 $to  = 'busforward@gmail.com' . ', ';  // обратите внимание на запятую
-// $to .= 'info@example.com';
+$to .= 'workrealcapital@yandex.ru';
 
 // тема письма
 $subject = 'Письмо с моего сайта';
 
 // текст письма
-$message = 'Пользователь' . $_POST['name'] . ' отправил вам письмо:<br />
+$message = 'Пользователь ' . $_POST['name'] . ' отправил вам письмо:<br />
 Связяться с ним можно по телефону <a href="tel:' . $_POST['phone'] . '">' . $_POST['phone'] . '</a>'
 ;
 
