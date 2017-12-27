@@ -1925,7 +1925,8 @@ a {
     padding-top: 48px; }
     .header__action_tel {
       margin-right: 20px;
-      font-size: 24px;
+      font-size: 28px;
+      color: #36a566;
       text-decoration: none;
       vertical-align: middle; }
       .header__action_tel:hover {
@@ -2477,7 +2478,8 @@ a {
     margin-right: 37px;
     position: relative; }
     .general__left_top {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-size: 50px; }
     .general__left_day {
       color: #36a566; }
     .general__left_bottom {
@@ -2485,14 +2487,14 @@ a {
       font-size: 31px;
       margin-bottom: 40px; }
   .general__percent {
-    width: 230px;
-    height: 230px;
-    line-height: 230px;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
     border-radius: 50%;
     background-color: #36a566;
     overflow: hidden;
-    font-size: 125px;
-    padding-left: 8px;
+    font-size: 100px;
+    padding-left: 12px;
     letter-spacing: -0.16em;
     position: relative; }
   .general .download__line {
