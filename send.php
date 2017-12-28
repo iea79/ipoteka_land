@@ -1,7 +1,7 @@
 <?php
 // несколько получателей
-$to  = 'busforward@gmail.com' . ', ';  // обратите внимание на запятую
-$to .= 'workrealcapital@yandex.ru';
+$to  = 'workrealcapital@yandex.ru' . ', ';  // обратите внимание на запятую
+// $to .= 'workrealcapital@yandex.ru'; // Второй адрес
 
 // тема письма
 $subject = 'Письмо с сайта';
